@@ -21,7 +21,6 @@ private:
 public:
     explicit Multime(Comparator<T> cmpFunc);
     ~Multime();
-
     void add( T& e);
     int remove( T& e);
     bool ifExist( T& e) ;

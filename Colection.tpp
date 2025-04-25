@@ -31,12 +31,11 @@ public:
     int nrOcurencies(const T& valoare) const;
     Entry<T> getAt(int position) const;
     int getNrElements() const;
-
     template<typename U>
     friend std::ostream& operator<<(std::ostream& os, const Colection<U>& t);
 };
 
-// --- Implementations ---
+// Implementari
 
 template<typename T>
 Colection<T>::Colection() {

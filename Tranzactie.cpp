@@ -1,4 +1,3 @@
-
 #include "Tranzactie.h"
 #include <utility>
 //
@@ -86,7 +85,7 @@ Colection<int>& Tranzactie::getColection() {
 
 std::ostream & operator<<(std::ostream &os, const Tranzactie &t) {
     if (t.tranzactieValida)
-        os << "Tranzactie in data de "<< t.data<< ",in valoare de:" << t.suma << " \n"<< t.colection;
+        os << "Tranzactie in data de "<< t.data<< ", in valoare de:" << t.suma << " \n"<< t.colection;
     else
         os << "Tranzactia in valoare de " << t.suma << " nu se poate realiza\n";
     return os;

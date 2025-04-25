@@ -4,8 +4,6 @@
 
 #ifndef MULTIMEORDONATA_ITERATOR_H
 #define MULTIMEORDONATA_ITERATOR_H
-
-
 #include "Multime.h"
 
 template<typename T>
@@ -19,12 +17,9 @@ public:
 
     void first();
     void next();
-    bool valid() const;
+    [[nodiscard]] bool valid() const;
     T current() const;
 };
-
-
-
 #include "Iterator.tpp"
 
 #endif //MULTIMEORDONATA_ITERATOR_H
