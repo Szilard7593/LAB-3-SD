@@ -50,6 +50,7 @@ Tranzactie::Tranzactie() {
 
 Tranzactie::Tranzactie(const Tranzactie &t){
     id = t.id;
+    data = t.data;
     suma = t.suma;
     tranzactieValida = t.tranzactieValida;
     colection = t.colection;
@@ -61,6 +62,7 @@ Tranzactie::Tranzactie(int id, int suma, std::string data, Colection<int>& bancn
     calculSuma(bancnote);
     this->data = std::move(data);
 }
+
 
 int Tranzactie::getId() const {
     return id;
@@ -84,9 +86,9 @@ Colection<int>& Tranzactie::getColection() {
 
 std::ostream & operator<<(std::ostream &os, const Tranzactie &t) {
     if (t.tranzactieValida)
-        os << "Tranzactie in valoare de: " << t.suma<<" \n"<< t.colection;
+        os << "Tranzactie in data de "<< t.data<< ",in valoare de:" << t.suma << " \n"<< t.colection;
     else
-        os << "Optiune invalida sau exemplare insuficiente.";
+        os << "Tranzactia in valoare de " << t.suma << " nu se poate realiza\n";
     return os;
 }
 
